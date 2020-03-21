@@ -6,9 +6,7 @@ Contributor for design: denscovery
 
 ![code](https://github.com/raizengxd/Project-Ayin-1.0/blob/master/screenshots/screenshot-covid.PNG)
 
-## Ayin 1.5
 
-![code](https://github.com/raizengxd/Project-Ayin-1.0/blob/master/screenshots/s.gif)
 
 
 # API
