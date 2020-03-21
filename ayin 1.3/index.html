@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="design.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+</head>
+<style>
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="title-name">
+            <p>COVID-19 CASE REPORT</p>
+        </div>
+        <div class="list-country">                
+        </div>        
+    </div>   
+   
+
+    <script>
+    $.getJSON('https://corona.lmao.ninja/countries', function(data) {      
+        data.forEach(function(i){ 
+         $(".list-country").append(`<div class="card-country">
+            
+            <div class="country-name">
+                ${i.country}                
+            </div>
+            <span >
+            <b>Cases:</b>${i.cases}<br>
+            <b>Today Cases:</b>${i.todayCases}<br>
+            <b>Deaths:</b>${i.deaths}<br>
+            <b>Today Deaths:</b>${i.todayDeaths}<br>
+            <b>Recovered:</b>${i.recovered}<br>
+            <b>Active:</b>${i.active}<br>
+            <b>Critical:</b>${i.critical}<br>
+            <b>Cases per Million:</b>${i.casesPerOneMillion}<br>
+            </span>
+            </div>  
+            <br>`);
+    });
+    });
+    </script>
+    
+</body>
+</html>
